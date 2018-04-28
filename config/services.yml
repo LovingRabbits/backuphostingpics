@@ -1,0 +1,26 @@
+services:      
+    fofa.backuphostingpics.controller:
+        class: fofa\backuphostingpics\controller\main_controller
+        arguments:
+            - @config
+            - @request
+            - @pagination
+            - @dbal.conn
+            - @auth
+            - @template
+            - @user
+            - @controller.helper
+            - %core.root_path%
+            - %core.php_ext%
+            - %core.table_prefix%
+
+    fofa.backuphostingpics.listener:
+        class: fofa\backuphostingpics\event\listener
+        arguments:
+            - @config
+            - @controller.helper
+            - @template
+            - @user
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

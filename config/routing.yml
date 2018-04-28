@@ -1,0 +1,3 @@
+fofa_backuphostingpics_controller:
+    pattern: /backuphostingpics
+    defaults: { _controller: fofa.backuphostingpics.controller:main }

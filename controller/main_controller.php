@@ -91,7 +91,7 @@ class main_controller
 					poster_id int(10) UNSIGNED NOT NULL DEFAULT "0",
 					result_analysed tinyint(1) UNSIGNED NOT NULL DEFAULT "0",
 					PRIMARY KEY (result_id),
-					UNIQUE(post_id)
+					UNIQUE(result_id)
 				)';
 				$this->db->sql_query($sql);
 
